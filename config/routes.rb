@@ -1,4 +1,9 @@
 Farcaster::Application.routes.draw do
+
+  scope :data_service, :controller => 'data_service', :path => 'data_service' do
+    post :retrieve
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
