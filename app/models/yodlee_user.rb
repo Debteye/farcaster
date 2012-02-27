@@ -8,6 +8,8 @@ class YodleeUser < ActiveRecord::Base
   has_many :yodlee_bank_accounts
   has_many :yodlee_bank_transactions, :through => :yodlee_bank_accounts
 
+  belongs_to :customer
+
 
   def self.bulk_update!
     all.each do |user|
