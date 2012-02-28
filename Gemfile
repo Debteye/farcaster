@@ -10,6 +10,7 @@ gem 'pg'
 gem 'nori'
 gem 'unicorn'
 gem 'typhoeus'
+gem 'hoptoad_notifier'
 
 # Gems used only for assets and not required
 # in production environments by default.

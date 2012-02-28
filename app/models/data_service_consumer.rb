@@ -19,9 +19,9 @@ class DataServiceConsumer < ActiveRecord::Base
       end  
     end
 
-    response.to_xml(:include => {:yodlee_card_accounts => {:include => {:yodlee_card_statements => {:include => :yodlee_card_bill}}}}, 
+    response.to_xml(:include => {:yodlee_card_accounts => {:include => :yodlee_card_bills}}, 
                     :except => excluded_columns, 
-                    :root => "CustomerReturn",
+                    :root => "Customers",
                     :skip_instruct => true,
                     :camelize => true).gsub("Yodlee", "")
   end 
@@ -30,7 +30,7 @@ class DataServiceConsumer < ActiveRecord::Base
   def excluded_columns
     [
      :created_at, :id, :updated_at, :customer_id, :username, :password, :registered, :updating, :yodlee_item_id, :yodlee_user_id,
-     :card_account_id, :item_account_id
+     :card_account_id, :item_account_id, :excluded, :account_id, :bill_id, :billing_account_id, :bill_pay_service_id
     ]
   end
 end
