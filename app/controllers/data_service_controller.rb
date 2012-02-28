@@ -17,6 +17,9 @@ sample
         <Email>test@test.com</Email>
       </Customer>
       <Customer>
+        <Email>test1330415600@test.com</Email>
+      </Customer>
+      <Customer>
         <Email>test2@test.com</Email>
       </Customer>
     </Customers>
@@ -46,12 +49,8 @@ sample
           <CardBills type="array">
             <CardBill>
               <CardBillId type="integer">15067917</CardBillId>
-              <AccountId>15067917</AccountId>
               <IsHistoric type="boolean">false</IsHistoric>
               <AcctType>card</AcctType>
-              <BillId nil="true"></BillId>
-              <BillingAccountId nil="true"></BillingAccountId>
-              <BillPayServiceId nil="true"></BillPayServiceId>
               <MarkAsPaidReason>unknown</MarkAsPaidReason>
               <AccountNumber>XXXXXXXXXXXX7096</AccountNumber>
               <DerivedPaymStatus>paid</DerivedPaymStatus>
@@ -77,6 +76,96 @@ sample
           </CardBills>
         </CardAccount>
       </CardAccounts>
+      <BillingAccounts type="array"/>
+    </CustomerData>
+  </Customer>
+  <Customer>
+    <CustomerDetails>
+      <Email>test1330415600@test.com</Email>
+    </CustomerDetails>
+    <CustomerData>
+      <CardAccounts type="array">
+        <CardAccount>
+          <CardAccountId type="integer">10349291</CardAccountId>
+          <AcctType>unknown</AcctType>
+          <AccountNumber>XXXXXXXXXXXX7096</AccountNumber>
+          <AccountName>BankAmericard Cash</AccountName>
+          <AnnualPercentYield nil="true"></AnnualPercentYield>
+          <RunningBalance type="decimal">0.0</RunningBalance>
+          <AvailableCredit type="decimal">10000.0</AvailableCredit>
+          <TotalCreditLine type="decimal">10000.0</TotalCreditLine>
+          <AvailableCash type="decimal">3000.0</AvailableCash>
+          <TotalCashLimit type="decimal">3000.0</TotalCashLimit>
+          <CardBills type="array">
+            <CardBill>
+              <CardBillId type="integer">15067917</CardBillId>
+              <IsHistoric type="boolean">false</IsHistoric>
+              <AcctType>card</AcctType>
+              <MarkAsPaidReason>unknown</MarkAsPaidReason>
+              <AccountNumber>XXXXXXXXXXXX7096</AccountNumber>
+              <DerivedPaymStatus>paid</DerivedPaymStatus>
+              <EndingBalance type="decimal">9.5</EndingBalance>
+              <PastDue type="decimal">0.0</PastDue>
+              <AmountDue type="decimal" nil="true"></AmountDue>
+              <MinPayment type="decimal">9.5</MinPayment>
+              <LastPayment type="decimal" nil="true"></LastPayment>
+              <IsDueDateEstimated type="boolean" nil="true"></IsDueDateEstimated>
+              <PaymRecvdDate type="date" nil="true"></PaymRecvdDate>
+              <BillPeriodEndDate type="date" nil="true"></BillPeriodEndDate>
+              <PaymDate type="date" nil="true"></PaymDate>
+              <BillPeriodStartDate type="date" nil="true"></BillPeriodStartDate>
+              <BillDate type="date">2012-02-03</BillDate>
+              <DueDate type="date">2012-03-02</DueDate>
+              <LastPayDate type="date" nil="true"></LastPayDate>
+              <PaymType>unknown</PaymType>
+              <PaymStatus>unknown</PaymStatus>
+              <IsDueOnReceipt type="boolean">false</IsDueOnReceipt>
+              <UserPaymStatus>unknown</UserPaymStatus>
+              <AccountName>BankAmericard Cash</AccountName>
+            </CardBill>
+          </CardBills>
+        </CardAccount>
+      </CardAccounts>
+      <BillingAccounts type="array">
+        <BillingAccount>
+          <BillingAccountId type="integer">10019359</BillingAccountId>
+          <AcctType>unknown</AcctType>
+          <AccountNumber>232015573049</AccountNumber>
+          <AccountName>232015573049</AccountName>
+          <LastPayment type="decimal">103.79</LastPayment>
+          <LastPaymentDate type="date">2012-01-27</LastPaymentDate>
+          <CardName>AT&amp;T</CardName>
+          <Bills type="array">
+            <Bill>
+              <BillId type="integer">15252162</BillId>
+              <BillingAccountId type="integer">10019359</BillingAccountId>
+              <IsHistoric type="boolean">false</IsHistoric>
+              <AcctType>unknown</AcctType>
+              <MarkAsPaidReason>unknown</MarkAsPaidReason>
+              <AccountNumber>232015573049</AccountNumber>
+              <DerivedPaymStatus>inbox</DerivedPaymStatus>
+              <EndingBalance type="decimal" nil="true"></EndingBalance>
+              <PastDue type="decimal" nil="true"></PastDue>
+              <AmountDue type="decimal">103.79</AmountDue>
+              <MinPayment type="decimal" nil="true"></MinPayment>
+              <LastPayment type="decimal" nil="true"></LastPayment>
+              <IsDueDateEstimated type="boolean" nil="true"></IsDueDateEstimated>
+              <PaymRecvdDate type="date" nil="true"></PaymRecvdDate>
+              <BillPeriodEndDate type="date">2012-02-20</BillPeriodEndDate>
+              <PaymDate type="date" nil="true"></PaymDate>
+              <BillPeriodStartDate type="date">2012-01-21</BillPeriodStartDate>
+              <BillDate type="date">2012-02-20</BillDate>
+              <DueDate type="date">2012-03-15</DueDate>
+              <LastPayDate type="date" nil="true"></LastPayDate>
+              <PaymType>unknown</PaymType>
+              <PaymStatus>unknown</PaymStatus>
+              <IsDueOnReceipt type="boolean">false</IsDueOnReceipt>
+              <UserPaymStatus>unknown</UserPaymStatus>
+              <AccountName>232015573049</AccountName>
+            </Bill>
+          </Bills>
+        </BillingAccount>
+      </BillingAccounts>
     </CustomerData>
   </Customer>
   <Customer>
@@ -87,6 +176,7 @@ sample
   </Customer>
 </Customers>
 </DataServiceResponse>
+
 =end
 
   def retrieve

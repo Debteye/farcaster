@@ -19,7 +19,7 @@ class YodleeCardAccount <  ActiveRecord::Base
                :total_cash_limit => lambda {|value| value && value[:amount]},
               }
 
-  def card_name
+  def provider_name
     yodlee_item.yodlee_data_provider.content_service_display_name
   end
 

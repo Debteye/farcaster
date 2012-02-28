@@ -19,7 +19,8 @@ class DataServiceConsumer < ActiveRecord::Base
       end  
     end
 
-    response.to_xml(:include => {:yodlee_card_accounts => {:include => :yodlee_card_bills}}, 
+    response.to_xml(:include => {:yodlee_card_accounts => {:include => :yodlee_card_bills, :methods => [:provider_name]},
+                                 :yodlee_billing_accounts => {:include => :yodlee_bills, :methods => [:provider_name]}}, 
                     :except => excluded_columns, 
                     :root => "Customers",
                     :skip_instruct => true,

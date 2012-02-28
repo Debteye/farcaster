@@ -8,6 +8,7 @@ class YodleeItem < ActiveRecord::Base
 
   has_many :yodlee_bank_accounts, :foreign_key => "yodlee_item_id", :primary_key => "yodlee_item_id"
   has_many :yodlee_card_accounts, :foreign_key => "yodlee_item_id", :primary_key => "yodlee_item_id"
+  has_many :yodlee_billing_accounts, :foreign_key => "yodlee_item_id", :primary_key => "yodlee_item_id"
   
   scope :banks, joins(:yodlee_data_provider).where('yodlee_data_providers.provider_type' => "bank")
   scope :verified, where(:verification_status => "SUCCESS")
